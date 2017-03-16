@@ -38,7 +38,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-lg-4">New Password <span class="required">※</span></label>
+                                    <label class="control-label col-lg-4">Password <span class="required">※</span></label>
                                     <div class="col-lg-3">
                                         <input class="form-control" tabindex="2" type="Password" name="new_pass" placeholder="New Password">
                                         @if ($errors->first('new_pass')) 
@@ -47,7 +47,7 @@
                                     </div>
                                 </div>
                                 <div class="form-group">
-                                    <label class="control-label col-lg-4">Confirm New Password</label>
+                                    <label class="control-label col-lg-4">Confirm Password</label>
                                     <div class="col-lg-3">
                                         <input class="form-control" tabindex="3" type="Password" name="conf_new_pass" placeholder="Confirm New Password">
                                         @if ($errors->first('conf_new_pass')) 

@@ -28,9 +28,9 @@
                                 </th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="width: auto;" aria-label="Platform(s): activate to sort column ascending">Content
                                 </th>
-                                <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="width: 9%;" aria-label="CSS grade: activate to sort column ascending">Date
+                                <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="min-width: 90px;" aria-label="CSS grade: activate to sort column ascending">Date
                                 </th>
-                                <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="width: 8%;" aria-label="CSS grade: activate to sort column ascending" style="text-align: center;">Actions
+                                <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="min-width: 80px;" aria-label="CSS grade: activate to sort column ascending" style="text-align: center;">Actions
                                 </th>
                             </tr>
                         </thead>
@@ -38,8 +38,8 @@
                             @if($count = count($contacts) > 0)
                             @foreach($contacts as $contact)
                             <tr class="gradeA">
-                                <td class="sorting_1" style="text-align: center; vertical-align:middle;" @if($contact->read == 1) title="Unread" @else title="Read" @endif>
-                                    <a href="{{route('backend.contacts.view', $contact->id)}}" class="flag-contact">
+                                <td class="sorting_1" style="text-align: center; vertical-align:middle;">
+                                    <a href="{{route('backend.contacts.view', $contact->id)}}" class="flag-contact" data-toggle="tooltip" data-placement="top" @if($contact->read == 1) title="Unread" @else title="Read" @endif>
                                     @if($contact->read == 1)
                                     <!-- <i class="icon-envelope"></i> -->
                                     <i class="icon-flag icon-2x pull-left flag-unread-color"></i>
@@ -49,9 +49,9 @@
                                     @endif
                                     </a>
                                 </td>
-                                <td class="center"><a href="{{route('backend.contacts.view', $contact->id)}}">{{$contact->title}}</a></td>
+                                <td class="center"><a href="{{route('backend.contacts.view', $contact->id)}}" data-toggle="tooltip" title="{{$contact->title}}">{{neatest_trim($contact->title, 80)}}</a></td>
                                 <td class="center">{{$contact->email}}</td>
-                                <td class="center">{{$contact->content}}</td>
+                                <td class="center" ><a href="#" class="link-none" data-toggle="tooltip" data-placement="bottom" title="{{$contact->content}}"> {{neatest_trim($contact->content, 50)}}</a></td>
                                 <td class="center" style="text-align: center;">{{formatDate($contact->created_at,'-')}}</td>
                                 <td class="center" style="text-align: center;">
                                     <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#IiModal" title="Delete"><i class="icon-trash icon-white"></i></button>
@@ -63,7 +63,7 @@
                                       <div class="modal-content" style="width: 330px; height: 215px;">
                                         <div class="modal-header">
                                           <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                          <h4 class="modal-title">Deleting Confirm...</h4>
+                                          <h4 class="modal-title">Deleting Confirmation...</h4>
                                         </div>
                                         <div class="modal-body">
                                           <p>Are you sure to detele this item?</p>
@@ -93,5 +93,6 @@
 
 </div>
 </div>
+
 <!--END PAGE CONTENT -->
 @endsection

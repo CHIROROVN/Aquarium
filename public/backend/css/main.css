@@ -2776,7 +2776,7 @@ th.label-left {
 }
 
 .flag-unread-color {
-  color: #5cb85c;
+  color: #F3953B;
   padding-left: 20px;
 }
 
@@ -2784,4 +2784,10 @@ a.flag-contact:hover {
   text-decoration: none;
   border-color: 10px solid #6D7378;
   vertical-align:middle;
+}
+
+a.link-none {
+  text-decoration: none;
+  cursor: default;
+  color: #333333;
 }

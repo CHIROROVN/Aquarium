@@ -27,7 +27,7 @@ return [
     */
     'error_old_pass_required'                          => 'Please enter old password.',
     'error_new_pass_required'                          => 'Please enter new password.',
-    'error_conf_new_pass_same'                         => 'The new password and confirm new password not same.',
+    'error_conf_new_pass_same'                         => 'New password does not match the confirm new password.',
     'check_hashed_pass'                                => 'Current password is incorrect.',
 
 ];

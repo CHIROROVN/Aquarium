@@ -102,9 +102,9 @@
                     <!--ALERTS SECTION -->
                     <li class="chat-panel dropdown">
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-                            <span class="label label-danger">8</span>   <i class="icon-comments"></i>&nbsp; <i class="icon-chevron-down"></i>
+                            <span class="label label-success">0</span>   <i class="icon-comments"></i>&nbsp; <i class="icon-chevron-down"></i>
                         </a>
-
+<!--
                         <ul class="dropdown-menu dropdown-alerts">
 
                             <li>
@@ -158,7 +158,7 @@
                                     <i class="icon-angle-right"></i>
                                 </a>
                             </li>
-                        </ul>
+                        </ul> -->
 
                     </li>
                     <!-- END ALERTS SECTION -->

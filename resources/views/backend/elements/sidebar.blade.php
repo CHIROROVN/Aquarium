@@ -66,7 +66,7 @@
                     <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-contact">
                         <i class="icon-envelope"> </i> Contact <span class="pull-right"> 
                           <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>
-                          &nbsp; <span class="label label-success">{{cContact()}}</span>&nbsp;
+                          &nbsp; <span class="label label-warning">{{cContact()}}</span>&nbsp;
                     </a>
                     <ul class="collapse" id="component-nav-contact">
                         <li class=""><a href="{{route('backend.contacts.index')}}"><i class="icon-angle-right"></i> List </a></li>
@@ -76,10 +76,10 @@
 
                 <!-- Chat Rooms -->
                 <li class="panel ">
-                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-chat">
+                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-chat-disable">
                         <i class="icon-comments"> </i> Chat Rooms <span class="pull-right">
                           <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>&nbsp;
-                          &nbsp; <span class="label label-danger">3</span>&nbsp;
+                          &nbsp; <span class="label label-success">3</span>&nbsp;
                     </a>
                     <ul class="collapse" id="component-nav-chat">
                         <li class=""><a href="{{route('backend.chats.index')}}"><i class="icon-angle-right"></i> List </a></li>
@@ -87,22 +87,45 @@
                 </li>
                 <!-- /Chat -->
 
-                <!-- System -->
-                <li class="panel ">
-                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-system">
-                        <i class="icon-cog"> </i> System <span class="pull-right">
-                          <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>&nbsp;
+                <!-- Settings -->
+                <li class="panel">
+                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#DDL-nav">
+                        <i class="icon-cogs"></i> Settings
+       
+                        <span class="pull-right">
+                            <i class="icon-angle-left"></i>
+                        </span>
                     </a>
-                    <ul class="collapse" id="component-nav-system">
-                        <li class=""><a href=""><i class="icon-angle-right"></i> Logo </a></li>
-                        <li class=""><a href=""><i class="icon-angle-right"></i> Meta </a></li>
-                        <li class=""><a href=""><i class="icon-angle-right"></i> Footer </a></li>
-                        <li class=""><a href=""><i class="icon-angle-right"></i> Banner </a></li>
-                        <li class=""><a href=""><i class="icon-angle-right"></i> Google Map </a></li>
-                        <li class=""><a href="{{route('backend.systems.signature')}}"><i class="icon-angle-right"></i> Mail </a></li>
+                    <ul class="collapse" id="DDL-nav">
+                        <li>
+                            <a href="#" data-parent="#DDL-nav" data-toggle="collapse" class="accordion-toggle" data-target="#DDL1-nav">
+                                <i class="icon-envelope"></i>&nbsp; Mail Setting
+       
+                        <span class="pull-right" style="margin-right: 20px;">
+                            <i class="icon-angle-left"></i>
+                        </span>
+
+                            </a>
+                            <ul class="collapse" id="DDL1-nav">
+                                <li>
+                                    <a href="{{route('backend.systems.signature')}}"><i class="icon-angle-right"></i> Mail Signature </a>
+
+                                </li>
+                                <li>
+                                    <a href="#"><i class="icon-angle-right"></i> Mail Address </a>
+                                </li>
+
+                            </ul>
+
+                        </li>
+                        <li><a href="#"><i class="icon-angle-right"></i> Logo Site</a></li>
+                        <li><a href="#"><i class="icon-angle-right"></i> Meta Tags </a></li>
+                        <li><a href="#"><i class="icon-angle-right"></i> Footer Site </a></li>
+                        <li><a href="#"><i class="icon-angle-right"></i> Google Map </a></li>
+
                     </ul>
                 </li>
-                <!-- /System -->
+                <!-- /Settings -->
 
                 <!-- User -->
                 <li class="panel ">

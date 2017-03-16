@@ -37,6 +37,11 @@
           "format-code" : true // enable syntax highlighting
         });
     </script>
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip(); 
+        });
+    </script>
 </body>
     <!-- END BODY-->
     

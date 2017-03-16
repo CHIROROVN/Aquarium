@@ -308,3 +308,59 @@
         }
     }
 
+    function trim_text($input, $length, $ellipses = true, $strip_html = true) {
+    //strip tags, if desired
+    if ($strip_html) {
+        $input = strip_tags($input);
+    }
+  
+    //no need to trim, already shorter than trim length
+    if (strlen($input) <= $length) {
+        return $input;
+    }
+  
+    //find last space within length
+    $last_space = strrpos(substr($input, 0, $length), ' ');
+    $trimmed_text = substr($input, 0, $last_space);
+  
+    //add ellipses (...)
+    if ($ellipses) {
+        $trimmed_text .= '...';
+    }
+  
+    return $trimmed_text;
+}
+
+function gen_string($string,$max=20)
+{
+    $tok=strtok($string,' ');
+    $string='';
+    while($tok!==false && mb_strlen($string)<$max)
+    {
+        if (mb_strlen($string)+mb_strlen($tok)<=$max)
+            $string.=$tok.' ';
+        else
+            break;
+        $tok=strtok(' ');
+    }
+    return trim($string).' ...';
+}
+
+function neatest_trim($content, $chars) {
+  if (strlen($content) > $chars) 
+  {
+    $content = str_replace('&nbsp;', ' ', $content);
+    $content = str_replace("\n", '', $content);
+    // use with wordpress    
+    //$content = strip_tags(strip_shortcodes(trim($content)));
+    $content = strip_tags(trim($content));
+    $content = preg_replace('/\s+?(\S+)?$/', '', mb_substr($content, 0, $chars));
+
+    $content = trim($content) . '...';
+    return $content;
+  }else {
+      return $content;
+  }
+
+}
+

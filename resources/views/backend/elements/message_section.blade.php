@@ -1,6 +1,6 @@
 <li class="dropdown">
     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
-        <span class="label label-success">{{cContact()}}</span>    <i class="icon-envelope-alt"></i>&nbsp; <i class="icon-chevron-down"></i>
+        <span class="label label-warning">{{cContact()}}</span>    <i class="icon-envelope-alt"></i>&nbsp; <i class="icon-chevron-down"></i>
     </a>
 
     <ul class="dropdown-menu dropdown-messages">
