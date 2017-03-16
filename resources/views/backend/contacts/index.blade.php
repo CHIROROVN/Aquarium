@@ -20,9 +20,9 @@
                     <table class="table table-striped table-bordered table-hover dataTable no-footer" id="dataTables-users" aria-describedby="dataTables-users-info">
                         <thead>
                             <tr role="row">
-                                <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="width: 7%;" aria-label="CSS grade: activate to sort column ascending" style="text-align: center;">Read
+                                <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="min-width: 52px;" aria-label="CSS grade: activate to sort column ascending" style="text-align: center;">Read
                                 </th>
-                                <th class="sorting_desc" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="width: auto;" aria-label="Rendering engine: activate to sort column ascending" aria-sort="descending">Title
+                                <th class="sorting_desc" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="min-width: 52px;" aria-label="Rendering engine: activate to sort column ascending" aria-sort="descending">Title
                                 </th>
                                 <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="width: auto;" aria-label="Browser: activate to sort column ascending">Email
                                 </th>
@@ -38,12 +38,14 @@
                             @if($count = count($contacts) > 0)
                             @foreach($contacts as $contact)
                             <tr class="gradeA">
-                                <td class="sorting_1" style="text-align: center;" @if($contact->read == 1) title="Unread" @else title="Read" @endif>
-                                    <a href="{{route('backend.contacts.view', $contact->id)}}">
+                                <td class="sorting_1" style="text-align: center; vertical-align:middle;" @if($contact->read == 1) title="Unread" @else title="Read" @endif>
+                                    <a href="{{route('backend.contacts.view', $contact->id)}}" class="flag-contact">
                                     @if($contact->read == 1)
-                                    <i class="icon-envelope"></i>
+                                    <!-- <i class="icon-envelope"></i> -->
+                                    <i class="icon-flag icon-2x pull-left flag-unread-color"></i>
                                     @else
-                                    <i class="icon-envelope-alt"></i>
+                                    <!-- i class="icon-envelope-alt"></i> -->
+                                    <i class="icon-flag icon-2x pull-left flag-read-color"></i>
                                     @endif
                                     </a>
                                 </td>

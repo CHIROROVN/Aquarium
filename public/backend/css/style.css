@@ -1168,5 +1168,10 @@ body.fixed .pattern-switcher {
 .comments .popover .arrow {
   top: 33%;
 }
+
+th.label-left {
+  color: #428bca;
+}
+
 /*COMMENTS*/
 /* --------------- END Component Styles -------------------- */

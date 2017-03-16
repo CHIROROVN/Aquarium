@@ -2763,3 +2763,25 @@ tr.head-table-row {
     display: inline-block;
   }
 }
+
+th.label-left {
+  color: #428bca;
+  vertical-align:middle;
+}
+
+.flag-read-color {
+  color: #c4cfd8;
+  padding-left: 20px;
+  vertical-align:middle;
+}
+
+.flag-unread-color {
+  color: #5cb85c;
+  padding-left: 20px;
+}
+
+a.flag-contact:hover {
+  text-decoration: none;
+  border-color: 10px solid #6D7378;
+  vertical-align:middle;
+}

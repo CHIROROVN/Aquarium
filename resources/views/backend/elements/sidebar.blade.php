@@ -1,6 +1,6 @@
        <div id="left">
             <div class="media user-media well-small">
-                <a class="user-link" href="javascript::void(0);">
+                <a class="user-link" href="javascript:void(0);">
                     <img class="media-object img-thumbnail user-img" alt="User Picture" src="{{ asset('') }}public/backend/img/user.png" height="60" width="60" />
                 </a>
                 <br />
@@ -24,7 +24,7 @@
 
                 <!-- Category -->
                 <li class="panel ">
-                    <a href="javascript::void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-category">
+                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-category">
                         <i class="icon-book"> </i> Category <span class="pull-right">
                           <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>&nbsp;
                     </a>
@@ -37,7 +37,7 @@
 
                 <!-- Product -->
                 <li class="panel ">
-                    <a href="javascript::void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-product">
+                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-product">
                         <i class="icon-weibo"> </i> Product <span class="pull-right">
                           <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>&nbsp;
                     </a>
@@ -50,7 +50,7 @@
 
                 <!-- Menu -->
                 <li class="panel ">
-                    <a href="javascript::void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-menu">
+                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-menu">
                         <i class="icon-tasks"> </i> Menu <span class="pull-right">
                           <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>&nbsp;
                     </a>
@@ -63,7 +63,7 @@
 
                 <!-- Contact -->
                 <li class="panel ">
-                    <a href="javascript::void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-contact">
+                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-contact">
                         <i class="icon-envelope"> </i> Contact <span class="pull-right"> 
                           <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>
                           &nbsp; <span class="label label-success">{{cContact()}}</span>&nbsp;
@@ -76,7 +76,7 @@
 
                 <!-- Chat Rooms -->
                 <li class="panel ">
-                    <a href="javascript::void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-chat">
+                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-chat">
                         <i class="icon-comments"> </i> Chat Rooms <span class="pull-right">
                           <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>&nbsp;
                           &nbsp; <span class="label label-danger">3</span>&nbsp;
@@ -89,7 +89,7 @@
 
                 <!-- System -->
                 <li class="panel ">
-                    <a href="javascript::void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-system">
+                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-system">
                         <i class="icon-cog"> </i> System <span class="pull-right">
                           <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>&nbsp;
                     </a>
@@ -106,7 +106,7 @@
 
                 <!-- User -->
                 <li class="panel ">
-                    <a href="javascript::void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-user">
+                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-user">
                         <i class="icon-user"> </i> Users <span class="pull-right">
                           <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>&nbsp;
                     </a>

@@ -73,4 +73,5 @@ class ContactController extends BackendController
         $data['last_user']              = Auth::user()->id;
         $clsContact->update($id, $data);
     }
+
 }
