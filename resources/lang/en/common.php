@@ -43,6 +43,8 @@ return [
     */
     'msg_cat_add_success'                               => 'Category created successfully.',
     'msg_cat_add_danger'                                => 'Category created failed.',
+    'msg_cat_edit_success'                              => 'Category edited successfully.',
+    'msg_cat_edit_danger'                               => 'Category edited failed.',
 
 
 ];

@@ -41,7 +41,7 @@
                                                 </th>
                                                 <th class="sorting" tabindex="0" aria-controls="dataTables-Products" rowspan="1" colspan="1" style="width: auto;" aria-label="Browser: activate to sort column ascending">Orders
                                                 </th>
-                                                <th class="sorting" tabindex="0" aria-controls="dataTables-Products" rowspan="1" colspan="1" style="width: 12%;" aria-label="CSS grade: activate to sort column ascending" style="text-align: center;">Actions
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-Products" rowspan="1" colspan="1" style="min-width: 9%;" aria-label="CSS grade: activate to sort column ascending" style="text-align: center;">Actions
                                                 </th>
                                             </tr>
                                         </thead>

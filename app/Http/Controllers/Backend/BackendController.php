@@ -34,7 +34,7 @@ class BackendController extends Controller
         else if(isset($_SERVER['REMOTE_ADDR']))
             $ipaddress = $_SERVER['REMOTE_ADDR'];
         else
-            $ipaddress = 'UNKNOWN';
+            $ipaddress = '';
 
         define('CLIENT_IP_ADRS', $ipaddress);
 

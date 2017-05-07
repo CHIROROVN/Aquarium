@@ -22,7 +22,7 @@ class ProductModel
 
     //get all products list
     public function getAllProduct(){
-        return DB::table($this->table)->where('last_kind', '<>', DELETE)->orderBy('order', 'desc')->orderBy('created_at', 'desc')->orderBy('updated_at', 'desc')->get();
+        return DB::table($this->table)->where('last_kind', '<>', DELETE)->orderBy('order', 'asc')->orderBy('created_at', 'desc')->orderBy('updated_at', 'desc')->get();
     }
 
     public function insert($data)

@@ -3,14 +3,14 @@ use DB;
 
 class CategoryModel
 {
-    protected $table = 'categories';
-    protected $primaryKey = 'id';
+    protected $table        = 'categories';
+    protected $primaryKey   = 'id';
 
     public function Rules()
     {
         return array(
                 'name'                              => 'required',
-                'order'                             => 'required',
+                'order'                             => 'required|numeric',
                 );
     }
 
@@ -19,6 +19,7 @@ class CategoryModel
         return array(
                 'name.required'                     => trans('validation.error_category_name_required'),
                 'order.required'                    => trans('validation.error_category_order_required'),
+                'order.numeric'                     => trans('validation.error_category_order_numeric'),
                 );
     }
 

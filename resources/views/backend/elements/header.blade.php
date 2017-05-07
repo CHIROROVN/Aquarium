@@ -14,7 +14,7 @@
   <!--[if IE]>
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <![endif]-->
-  <link href="{{ asset('') }}public/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+  <link href="{{ asset('') }}public/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
   <!-- GLOBAL STYLES -->
   <link rel="stylesheet" href="{{ asset('') }}public/backend/plugins/bootstrap/css/bootstrap.css" />
   <link rel="stylesheet" href="{{ asset('') }}public/backend/css/main.css" />
@@ -25,9 +25,8 @@
   <link rel="stylesheet" href="{{ asset('') }}public/backend/css/icon.css" />
   <link rel="stylesheet" href="{{ asset('') }}public/backend/css/bootstrap-fileupload.min.css">
 
-  <link rel="stylesheet" href="{{ asset('') }}public/backend/plugins/wysihtml5/dist/bootstrap-wysihtml5-0.0.2.css" />
-
-  <link rel="stylesheet" href="{{ asset('') }}public/backend/plugins/wysihtml5/lib/css/wysiwyg-color.css" />
+  <script src="{{ asset('') }}public/tinymce/js/tinymce/tinymce.min.js"></script>
+  <script src="{{ asset('') }}public/backend/plugins/jquery.min.js"></script>
 
   <!--END GLOBAL STYLES -->
 

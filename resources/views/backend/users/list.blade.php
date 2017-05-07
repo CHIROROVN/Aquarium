@@ -47,7 +47,7 @@
                                                 </th>
                                                 <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="width: 10%;" aria-label="CSS grade: activate to sort column ascending" style="text-align: center;">Date
                                                 </th>
-                                                <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="width: 12%;" aria-label="CSS grade: activate to sort column ascending" style="text-align: center;">Actions
+                                                <th class="sorting" tabindex="0" aria-controls="dataTables-users" rowspan="1" colspan="1" style="width: 9%;" aria-label="CSS grade: activate to sort column ascending" style="text-align: center;">Actions
                                                 </th>
                                             </tr>
                                         </thead>
@@ -67,35 +67,36 @@
                                                     </td>
                                                     <td class="center" style="text-align: center;">{{permission($user->power)}}</td>
                                                     <td class="center">{{formatDate($user->created_at,'-')}}</td>
-                                                    <td class="center" style="text-align: center;">
+                                                    <td class="center">
                                                         <button class="btn btn-info btn-sm" title="Edit" onclick="location.href='{{route('backend.users.edit', $user->id)}}'"><i class="icon-edit icon-white" ></i></button>
-                                                        <button class="btn btn-danger btn-sm" data-toggle="modal" data-target="#IiModal" title="Delete"><i class="icon-trash icon-white"></i></button>
+                                                        <button class="btn btn-danger btn-sm" data-toggle="modal" id="btn_del" data-id="{{$user->id}}" data-target="#IiModal" title="Delete"><i class="icon-trash icon-white"></i></button>
                                                     </td>
                                                 </tr>
+                                            <!-- Modal backend.contacts.del -->
+                                                <div class="modal fade" id="IiModal" role="dialog">
+                                                    <div class="modal-dialog modal-sm" style="width: 349px;">
+                                                      <div class="modal-content" style="width: 330px; height: 215px;">
+                                                        <div class="modal-header">
+                                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
+                                                          <h4 class="modal-title">Deleting Confirm</h4>
+                                                        </div>
+                                                        <div class="modal-body">
+                                                          <p>Are you sure to detele this item?</p>
+                                                        </div>
+                                                        <div class="modal-footer">
+                                                          <button type="button" class="btn btn-danger" id="yes_del" ><i class="icon-ok icon-white"></i> Yes</button>
+                                                          <button type="button" class="btn btn-info" data-dismiss="modal"><i class="icon-remove icon-white"></i>&nbsp;No&nbsp;</button>
+                                                        </div>
+                                                      </div>
+                                                    </div>
+                                                  </div>
+                                          <!-- /Modal -->
+                                  
                                             @endforeach
                                             @endif
                                         </tbody>
                                     </table>
 
-                                <!-- Modal backend.contacts.del -->
-                                <div class="modal fade" id="IiModal" role="dialog">
-                                    <div class="modal-dialog modal-sm" style="width: 349px;">
-                                      <div class="modal-content" style="width: 330px; height: 215px;">
-                                        <div class="modal-header">
-                                          <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                          <h4 class="modal-title">Deleting Confirm</h4>
-                                        </div>
-                                        <div class="modal-body">
-                                          <p>Are you sure to detele this item?</p>
-                                        </div>
-                                        <div class="modal-footer">
-                                          <button type="button" class="btn btn-danger" onclick="location.href='{{route('backend.users.del', $user->id)}}'"><i class="icon-ok icon-white"></i> Yes</button>
-                                          <button type="button" class="btn btn-info" data-dismiss="modal"><i class="icon-remove icon-white"></i>&nbsp;No&nbsp;</button>
-                                        </div>
-                                      </div>
-                                    </div>
-                                  </div>
-                                  <!-- /Modal -->
                                     </div>
                                 </div>
                                
@@ -108,10 +109,13 @@
 
             </div>
         </div>
-        <script type="text/javascript">
-            $('.btn-info').change(function(e) {
-                $('input[type=button]').focus();
-            });
-        </script>
+<script type="text/javascript">
+    $(document).on("click", "#btn_del", function () {
+     var Id = $(this).data('id');
+     $('#yes_del').click(function(){
+        window.location.href = "{{url('/')}}/admin/users/del/"+Id;
+     });
+    });
+</script>
     <!--END PAGE CONTENT -->
 @endsection

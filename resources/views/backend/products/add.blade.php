@@ -34,7 +34,6 @@
                                     </div>
                                 </div>
 
-
                                 <div class="form-group">
                                     <label class="control-label col-lg-4">Name <span class="required">※</span></label>
                                     <div class="col-lg-3">
@@ -54,6 +53,7 @@
                                         @endif
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <label class="control-label col-lg-4">E-mail <span class="required">※</span></label>
                                     <div class="col-lg-3">
@@ -63,6 +63,7 @@
                                         @endif
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <label class="control-label col-lg-4">Password <span class="required">※</span></label>
                                     <div class="col-lg-3">
@@ -72,6 +73,7 @@
                                         @endif
                                     </div>
                                 </div>
+
                                 <div class="form-group">
                                     <label class="control-label col-lg-4">Confirm Password</label>
                                     <div class="col-lg-3">
@@ -81,6 +83,7 @@
                                         @endif
                                     </div>
                                 </div>
+                                
                                 <div class="form-group">
                                     <label class="control-label col-lg-4">Permission</label>
                                     <div class="col-lg-2">

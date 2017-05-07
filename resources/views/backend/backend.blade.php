@@ -199,8 +199,8 @@
 
 
         <!--PAGE CONTENT -->
-	        @yield('content')
-    	<!--END PAGE CONTENT -->
+            @yield('content')
+        <!--END PAGE CONTENT -->
 
 
     </div>

@@ -2733,24 +2733,31 @@ i.table-cap {
 }
 
 .wysihtml5 {
-  width: calc(100% - 130px) !important;
   height: 200px !important;
-  margin-left: 130px !important;
+  margin-left: 3cm !important;
 }
 
+iframe.wysihtml5-sandbox {
+    margin-left: 3cm !important;
+    width: 100% !important;
+  }
+
+/*
 textarea {
   width: calc(100% - 130px) !important;
   height: 200px !important;
   margin-left: 130px !important;
 }
-
+*/
 ul.wysihtml5-toolbar {
-  margin-left: 130px !important;
+  margin-left: 3cm !important;
   width: auto;
 }
 
 tr.head-table-row {
-  background-color: #f6a828;
+  //background-color: #f6a828;
+  background-color: #004550;
+  //background: rgba(0, 188, 212, 0.54) none repeat scroll 0 0;
   color: #fff;
 }
 
@@ -2758,10 +2765,25 @@ tr.head-table-row {
   display: inline-flex;
 }
 
-@media(max-width:768px) {
+@media(max-width:1200px) {
   .form-group-item {
     display: inline-block;
   }
+
+  .wysihtml5 {
+    margin-left: 0cm !important;
+    width: 100%;
+  }
+
+  iframe.wysihtml5-sandbox {
+    margin-left: 0px !important;
+  }
+
+  ul.wysihtml5-toolbar {
+    margin-left: 0cm !important;
+    width: auto;
+  }
+
 }
 
 th.label-left {
@@ -2790,4 +2812,73 @@ a.link-none {
   text-decoration: none;
   cursor: default;
   color: #333333;
+}
+
+textarea {
+  resize: none;
+}
+
+.navbar-company {
+  display: inline;
+  color: #5cb85c;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+  text-decoration: none;
+
+}
+
+.navbar-company:hover {
+  text-decoration: none;
+  color: #5cb85c;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.navbar-company:visited {
+  text-decoration: none;
+  color: #5cb85c;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.navbar-company:after {
+  text-decoration: none;
+}
+
+.navbar-company:active {
+  text-decoration: none;
+  color: #5cb85c;
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
+}
+
+.header-ml {
+  font-family: "Crimson Text",serif;
+  font-size: 1.4em;
+  font-weight: 750;
+  text-transform: uppercase;
+}
+
+.header-sm {
+  color: #5bc0de;
+  font-family: "Crimson Text",serif;
+  font-size: 0.6em;
+  font-weight: 500;
+  text-transform: inherit;
+}
+
+td.center {
+  text-align: center;
+}
+
+.row-center {
+  vertical-align:middle;
+}
+
+.photo-table {
+  text-align: center;
+}
+
+.table > tbody > tr > td {
+     vertical-align: middle;
 }

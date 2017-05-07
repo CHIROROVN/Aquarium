@@ -35,6 +35,19 @@
                 </li>
                 <!-- /Category -->
 
+                <!-- Facility -->
+                <li class="panel ">
+                    <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-facility">
+                        <i class="icon-book"> </i> Facilities <span class="pull-right">
+                          <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>&nbsp;
+                    </a>
+                    <ul class="collapse" id="component-nav-facility">
+                        <li class=""><a href="{{route('backend.facilities.index')}}"><i class="icon-angle-right"></i> List </a></li>
+                        <li class=""><a href="{{route('backend.facilities.add')}}"><i class="icon-angle-right"></i> Add </a></li>
+                    </ul>
+                </li>
+                <!-- /Category -->
+
                 <!-- Product -->
                 <li class="panel ">
                     <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-product">
@@ -49,6 +62,7 @@
                 <!-- /Product -->
 
                 <!-- Menu -->
+                <!--
                 <li class="panel ">
                     <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-menu">
                         <i class="icon-tasks"> </i> Menu <span class="pull-right">
@@ -59,6 +73,7 @@
                         <li class=""><a href=""><i class="icon-angle-right"></i> Add </a></li>
                     </ul>
                 </li>
+                -->
                 <!-- /Menu -->
 
                 <!-- Contact -->
@@ -79,7 +94,7 @@
                     <a href="javascript:void(0);" data-parent="#menu" data-toggle="collapse" class="accordion-toggle" data-target="#component-nav-chat-disable">
                         <i class="icon-comments"> </i> Chat Rooms <span class="pull-right">
                           <i class="icon-angle-left"></i></span> &nbsp; <span class="label label-default"></span>&nbsp;
-                          &nbsp; <span class="label label-success">3</span>&nbsp;
+                          &nbsp; <span class="label label-success">0</span>&nbsp;
                     </a>
                     <ul class="collapse" id="component-nav-chat">
                         <li class=""><a href="{{route('backend.chats.index')}}"><i class="icon-angle-right"></i> List </a></li>
@@ -118,11 +133,7 @@
                             </ul>
 
                         </li>
-                        <li><a href="#"><i class="icon-angle-right"></i> Logo Site</a></li>
-                        <li><a href="#"><i class="icon-angle-right"></i> Meta Tags </a></li>
-                        <li><a href="#"><i class="icon-angle-right"></i> Footer Site </a></li>
-                        <li><a href="#"><i class="icon-angle-right"></i> Google Map </a></li>
-
+                        <li><a href="{{route('backend.settings.index')}}"><i class="icon-angle-right"></i> Website Info</a></li>
                     </ul>
                 </li>
                 <!-- /Settings -->

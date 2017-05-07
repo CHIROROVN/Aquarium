@@ -30,4 +30,16 @@ return [
     'error_conf_new_pass_same'                         => 'New password does not match the confirm new password.',
     'check_hashed_pass'                                => 'Current password is incorrect.',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Validation User Category
+    |--------------------------------------------------------------------------
+    |
+    */
+    'error_category_name_required'                    => 'Please enter category name.',
+    'error_category_order_required'                   => 'Please enter category order.',
+    'error_category_order_numeric'                    => 'Category order must be numeric type.',
+
+
+
 ];

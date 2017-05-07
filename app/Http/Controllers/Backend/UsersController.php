@@ -130,10 +130,11 @@ class UsersController extends BackendController
     |-----------------------------------
     */
     public function del($id){
-        $clsUser            = new UserModel();
-        $data['last_ip']                = CLIENT_IP_ADRS;
-        $data['last_user']              = Auth::user()->id;
-        $data['last_kind']              = DELETE;
+        $clsUser                    = new UserModel();
+        $data['last_ip']            = CLIENT_IP_ADRS;
+        $data['last_user']          = Auth::user()->id;
+        $data['last_kind']          = DELETE;
+        $data['updated_at']         = date('Y-m-d H:i:s');
 
        if ( $clsUser->update($id, $data) ) {
             Session::flash('success', trans('common.msg_users_del_success'));

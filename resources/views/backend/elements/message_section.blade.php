@@ -4,10 +4,10 @@
     </a>
 
     <ul class="dropdown-menu dropdown-messages">
-        <li>
+        <!-- <li>
             <a href="#">
                 <div>
-                   <strong>John Smith</strong>
+                   <strong>John Smith111</strong>
                     <span class="pull-right text-muted">
                         <em>Today</em>
                     </span>
@@ -48,10 +48,10 @@
                     <span class="label label-danger"> Low </span> 
                 </div>
             </a>
-        </li>
-        <li class="divider"></li>
+        </li> -->
+        <!-- <li class="divider"></li> -->
         <li>
-            <a class="text-center" href="#">
+            <a class="text-center" href="{{route('backend.contacts.index')}}">
                 <strong>Read All Messages</strong>
                 <i class="icon-angle-right"></i>
             </a>

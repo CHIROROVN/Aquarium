@@ -72,9 +72,11 @@ class CategoryController extends BackendController
     | get view edit Category
     |-----------------------------------
     */
-    public function edit() {
-        $data['title']             = 'Xanh Tuoi';
-        return view('backend.categories.edit');
+    public function edit($id) {
+        $clsCat                 = new CategoryModel();
+        $data['title']          = 'CATEGORIES MANAGEMENT';
+        $data['category']       = $clsCat->get_by_id($id);
+        return view('backend.categories.edit', $data);
     }
 
     /*
@@ -82,8 +84,28 @@ class CategoryController extends BackendController
     | post view edit Category
     |-----------------------------------
     */
-    public function postEdit() {
-        
+    public function postEdit($id) {
+        $clsCat            = new CategoryModel();
+        $validator = Validator::make(Input::all(), $clsCat->Rules(), $clsCat->Messages());
+
+        if ($validator->fails()) {
+            return redirect()->route('backend.categories.edit', $id)->withErrors($validator)->withInput();
+        }
+
+        $data['name']                           = Input::get('name');
+        $data['order']                          = Input::get('order');
+
+        $data['last_user']                      = Auth::user()->id;
+        $data['last_kind']                      = UPDATE;
+        $data['updated_at']                     = date('Y-m-d H:i:s');
+
+        if ( $clsCat->update($id, $data) ) {
+            Session::flash('success', trans('common.msg_cat_edit_success'));
+            return redirect()->route('backend.categories.index');
+        } else {
+            Session::flash('danger', trans('common.msg_cat_edit_danger'));
+            return redirect()->route('backend.categories.edit', $id);
+        }
     }
 
     /*
@@ -91,8 +113,18 @@ class CategoryController extends BackendController
     | delete Category
     |-----------------------------------
     */
-    public function del() {
-        return view('backend.categories.del');
+    public function del($id) {
+        $clsCat                     = new CategoryModel();
+        $data['last_ip']            = CLIENT_IP_ADRS;
+        $data['last_user']          = Auth::user()->id;
+        $data['last_kind']          = DELETE;
+
+       if ( $clsCat->update($id, $data) ) {
+            Session::flash('success', trans('common.msg_cat_del_success'));
+        } else {
+            Session::flash('danger', trans('common.msg_cat_del_danger'));
+        }
+        return redirect()->route('backend.categories.index');
     }
 
 

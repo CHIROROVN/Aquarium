@@ -44,7 +44,7 @@ class SystemsController extends BackendController
             return redirect()->route('backend.systems.signature')->withErrors($validator)->withInput();
         }
 
-        $data['id']                 = Input::get('id');
+        $data['id']                             = Input::get('id');
         $data['remember_token']                 = Input::get('_token');
         $data['content']                        = Input::get('content');
         $data['last_ip']                        = CLIENT_IP_ADRS;

@@ -66,7 +66,19 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Backend'], function () {
     Route::post('/categories/edit/{id}', ['as' => 'backend.categories.edit', 'uses' => 'CategoryController@postEdit']);
     Route::get('/categories/del/{id}', ['as' => 'backend.categories.del', 'uses' => 'CategoryController@del']);
 
-        /*
+    /*
+    |--------------------------------------------------------------------------
+    | Admin facility page
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/facilities', ['as' => 'backend.facilities.index', 'uses' => 'FacilityController@index']);
+    Route::get('/facilities/add', ['as' => 'backend.facilities.add', 'uses' => 'FacilityController@add']);
+    Route::post('/facilities/add', ['as' => 'backend.facilities.add', 'uses' => 'FacilityController@postAdd']);
+    Route::get('/facilities/edit/{id}', ['as' => 'backend.facilities.edit', 'uses' => 'FacilityController@edit']);
+    Route::post('/facilities/edit/{id}', ['as' => 'backend.facilities.edit', 'uses' => 'FacilityController@postEdit']);
+    Route::get('/facilities/del/{id}', ['as' => 'backend.facilities.del', 'uses' => 'FacilityController@del']);
+
+    /*
     |--------------------------------------------------------------------------
     | Admin product page
     |--------------------------------------------------------------------------
@@ -77,6 +89,15 @@ Route::group(['prefix' => 'admin', 'namespace' => 'Backend'], function () {
     Route::get('/products/edit/{id}', ['as' => 'backend.products.edit', 'uses' => 'ProductsController@edit']);
     Route::post('/products/edit/{id}', ['as' => 'backend.products.edit', 'uses' => 'ProductsController@postEdit']);
     Route::get('/products/del/{id}', ['as' => 'backend.products.del', 'uses' => 'ProductsController@del']);
+
+    /*
+    |--------------------------------------------------------------------------
+    | Admin setting website page
+    |--------------------------------------------------------------------------
+    */
+    Route::get('/settings', ['as' => 'backend.settings.index', 'uses' => 'SettingController@setting']);
+    Route::post('/settings', ['as' => 'backend.settings.index', 'uses' => 'SettingController@postSetting']);
+
 
     /*
     |--------------------------------------------------------------------------
