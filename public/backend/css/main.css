@@ -2868,7 +2868,7 @@ textarea {
 }
 
 td.center {
-  text-align: center;
+  //text-align: center;
 }
 
 .row-center {
@@ -2881,4 +2881,12 @@ td.center {
 
 .table > tbody > tr > td {
      vertical-align: middle;
+}
+
+.btn-sm, .btn-xs {
+    border-radius: 3px;
+    font-size: 22px;
+    height: 33px;
+    padding: 0.5px;
+    width: 31px;
 }

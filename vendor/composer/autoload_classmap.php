@@ -31,6 +31,7 @@ return array(
     'App\\Http\\Models\\CategoryModel' => $baseDir . '/app/Http/Models/CategoryModel.php',
     'App\\Http\\Models\\ContactModel' => $baseDir . '/app/Http/Models/ContactModel.php',
     'App\\Http\\Models\\EmailSignatureModel' => $baseDir . '/app/Http/Models/EmailSignatureModel.php',
+    'App\\Http\\Models\\FacilityModel' => $baseDir . '/app/Http/Models/FacilityModel.php',
     'App\\Http\\Models\\ProductModel' => $baseDir . '/app/Http/Models/ProductModel.php',
     'App\\Http\\Models\\SettingModel' => $baseDir . '/app/Http/Models/SettingModel.php',
     'App\\Http\\Models\\UserModel' => $baseDir . '/app/Http/Models/UserModel.php',

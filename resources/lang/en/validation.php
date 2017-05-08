@@ -32,13 +32,28 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Validation User Category
+    | Validation Category Model
     |--------------------------------------------------------------------------
     |
     */
     'error_category_name_required'                    => 'Please enter category name.',
     'error_category_order_required'                   => 'Please enter category order.',
     'error_category_order_numeric'                    => 'Category order must be numeric type.',
+
+    /*
+    |--------------------------------------------------------------------------
+    | Validation Facility Model
+    |--------------------------------------------------------------------------
+    |
+    */
+    'error_facility_name_required'                    => 'Please enter facility name.',
+    'error_facility_order_required'                   => 'Please enter facility order.',
+    'error_facility_order_numeric'                    => 'Facility order must be numeric type.',
+    'error_facility_image_required'                   => 'Please choose picture.',
+    'error_facility_image_image'                      => 'Please choose file Image.',
+    'error_facility_image_mimes'                      => 'The picture extend must be: jpeg, bmp, png, jpg.',
+    'error_facility_image_max'                        => 'The picture size must be less than 5MB.'
+
 
 
 

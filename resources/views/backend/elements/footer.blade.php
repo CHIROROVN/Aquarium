@@ -23,9 +23,14 @@
              $('#dataTables-users').dataTable();
          });
     </script>
-        <script>
+    <script>
          $(document).ready(function () {
              $('#dataTables-categories').dataTable();
+         });
+    </script>
+    <script>
+         $(document).ready(function () {
+             $('#dataTables-facilities').dataTable();
          });
     </script>
     
@@ -34,6 +39,7 @@
             $('[data-toggle="tooltip"]').tooltip(); 
         });
     </script>
+
 </body>
     <!-- END BODY-->
     

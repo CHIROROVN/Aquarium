@@ -8,7 +8,7 @@ class ContactModel
 
     //get all contact list
     public function getAllContact(){
-        return DB::table($this->table)->where('last_kind', '<>', DELETE)->orderBy('updated_at', 'desc')->get();
+        return DB::table($this->table)->where('last_kind', '<>', DELETE)->orderBy('updated_at', 'desc')->paginate(PAGINATION);
     }
 
     //update contact

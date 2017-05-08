@@ -104,7 +104,7 @@ class UserModel
 
     //get all user list
     public function getAllUser(){
-        return DB::table($this->table)->where('last_kind', '<>', DELETE)->orderBy('updated_at', 'desc')->get();
+        return DB::table($this->table)->where('last_kind', '<>', DELETE)->orderBy('updated_at', 'desc')->paginate(PAGINATION);
     }
 
     public function insert($data)

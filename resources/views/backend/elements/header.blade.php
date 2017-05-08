@@ -27,6 +27,9 @@
 
   <script src="{{ asset('') }}public/tinymce/js/tinymce/tinymce.min.js"></script>
   <script src="{{ asset('') }}public/backend/plugins/jquery.min.js"></script>
+  <script src="{{ asset('') }}public/backend/js/jquery-1.8.3.min.js"></script>
+  <script src="{{ asset('') }}public/backend/js/jquery.elevatezoom.js"></script>
+
 
   <!--END GLOBAL STYLES -->
 

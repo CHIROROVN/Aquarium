@@ -24,7 +24,7 @@ class FacilityController extends BackendController
     |-----------------------------------
     */
     public function index() {
-        $data['title']              = 'Facilities MANAGEMENT';
+        $data['title']              = 'FACILITIES MANAGEMENT';
         $clsFacilityModel                = new FacilityModel();
         $data['facilities']              = $clsFacilityModel->getAllFacility();
         return view('backend.facilities.index', $data);
@@ -36,7 +36,7 @@ class FacilityController extends BackendController
     |-----------------------------------
     */
     public function add() {
-        $data['title']              = 'Facilities MANAGEMENT';
+        $data['title']              = 'FACILITIES MANAGEMENT';
         $clsFacility            = new FacilityModel();
         $data['order_max'] = $clsFacility->get_max_order() + 1;
         return view('backend.facilities.add',$data);
@@ -65,6 +65,8 @@ class FacilityController extends BackendController
             $fileName = $file.'.'.$ext;
             Image::make(Input::file('image')->getRealPath())->save(public_path().'/upload/facilities/'.$fileName);
             $data['image'] = '/upload/facilities/'.$fileName;
+            Image::make(Input::file('image')->getRealPath())->resize(80,70)->save(public_path().'/upload/facilities/thumb/'.$fileName);
+            $data['thumb'] = '/upload/facilities/thumb/'.$fileName;
         } 
 
         $data['last_user']                      = Auth::user()->id;
@@ -87,7 +89,7 @@ class FacilityController extends BackendController
     */
     public function edit($id) {
         $clsFacility            = new FacilityModel();
-        $data['title']          = 'Facilities MANAGEMENT';
+        $data['title']          = 'FACILITIES MANAGEMENT';
         $data['facility']       = $clsFacility->get_by_id($id);
         $data['id']             = $id;
         return view('backend.facilities.edit', $data);
@@ -128,12 +130,20 @@ class FacilityController extends BackendController
                     \File::delete($fileDel);
                 }
             }
+            if(!empty($data_image->thumb)){
+                $fileDel = $data_image->thumb;
+                if(File::isFile($fileDel)){
+                    \File::delete($fileDel);
+                }
+            }
 
             $ext = Input::file('image')->getClientOriginalExtension();
             $file = Input::get('name') ? trim(Input::get('name')) : rand(time(), 999);
             $fileName = $file.'.'.$ext;
             Image::make(Input::file('image')->getRealPath())->save(public_path().'/upload/facilities/'.$fileName);
             $data['image'] = '/upload/facilities/'.$fileName;
+            Image::make(Input::file('image')->getRealPath())->resize(80,70)->save(public_path().'/upload/facilities/thumb/'.$fileName);
+            $data['thumb'] = '/upload/facilities/thumb/'.$fileName;
         } 
 
         $data['last_user']                      = Auth::user()->id;
@@ -163,6 +173,12 @@ class FacilityController extends BackendController
         $data_image = DB::table('facilities')->first();
         if(!empty($data_image->image)){
             $fileDel = $data_image->image;
+            if(File::isFile($fileDel)){
+                \File::delete($fileDel);
+            }
+        }
+        if(!empty($data_image->thumb)){
+            $fileDel = $data_image->thumb;
             if(File::isFile($fileDel)){
                 \File::delete($fileDel);
             }

@@ -25,7 +25,7 @@ class CategoryModel
 
     //get all category list
     public function getAllCat(){
-        return DB::table($this->table)->where('last_kind', '<>', DELETE)->orderBy('order', '=', 'asc')->get();
+        return DB::table($this->table)->where('last_kind', '<>', DELETE)->orderBy('order', '=', 'asc')->paginate(PAGINATION);
     }
 
     public function getListCat(){

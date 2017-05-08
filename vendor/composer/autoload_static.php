@@ -343,6 +343,7 @@ class ComposerStaticInitc411ad2bba5e55e13943b7ca4a2d7936
         'App\\Http\\Models\\CategoryModel' => __DIR__ . '/../..' . '/app/Http/Models/CategoryModel.php',
         'App\\Http\\Models\\ContactModel' => __DIR__ . '/../..' . '/app/Http/Models/ContactModel.php',
         'App\\Http\\Models\\EmailSignatureModel' => __DIR__ . '/../..' . '/app/Http/Models/EmailSignatureModel.php',
+        'App\\Http\\Models\\FacilityModel' => __DIR__ . '/../..' . '/app/Http/Models/FacilityModel.php',
         'App\\Http\\Models\\ProductModel' => __DIR__ . '/../..' . '/app/Http/Models/ProductModel.php',
         'App\\Http\\Models\\SettingModel' => __DIR__ . '/../..' . '/app/Http/Models/SettingModel.php',
         'App\\Http\\Models\\UserModel' => __DIR__ . '/../..' . '/app/Http/Models/UserModel.php',

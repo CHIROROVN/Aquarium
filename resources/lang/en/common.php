@@ -46,6 +46,17 @@ return [
     'msg_cat_edit_success'                              => 'Category edited successfully.',
     'msg_cat_edit_danger'                               => 'Category edited failed.',
 
+    /*
+    |--------------------------------------------------------------------------
+    | Facility
+    |--------------------------------------------------------------------------
+    |
+    */
+    'msg_facility_add_success'                               => 'Facility created successfully.',
+    'msg_facility_add_danger'                                => 'Facility created failed.',
+    'msg_facility_edit_success'                              => 'Facility edited successfully.',
+    'msg_facility_edit_danger'                               => 'Facility edited failed.',
+
 
 ];
  
